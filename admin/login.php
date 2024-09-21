@@ -10,7 +10,6 @@
 		$adminData = $ad->getAdminData($_POST);
 	}
 ?>
-
 <div class="main">
 <h1>Admin Login</h1>
 <div class="adminlogin">
