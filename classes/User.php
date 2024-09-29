@@ -40,5 +40,17 @@ class User{
         $result = $this->db->select($query);
         return $result;
     }
+
+    public function disableUser($id){
+        $query = "UPDATE tbl_user SET status = 1 WHERE id = '$id'";
+        $result = $this->db->update($query);
+        if($result){
+            $msg = "<span class='success'>User Disabled</span>";
+            return $msg;
+        }else{
+            $msg = "<span class='error'>User Not Disabled</span>";
+            return $msg;
+        }
+    }
 }
 ?>
