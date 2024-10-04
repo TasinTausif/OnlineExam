@@ -5,12 +5,33 @@ include_once $filepath . '/../classes/User.php';
 
 $user =  new User();
 ?>
+<?php
+if (isset($_GET['dis'])) {
+    $disId = $_GET['dis'];
+    $disUser = $user->disableUser($disId);
+}
+
+if (isset($_GET['ena'])) {
+    $enaId = $_GET['ena'];
+    $enaUser = $user->enableUser($enaId);
+}
+
+if (isset($_GET['del'])) {
+    $delId = $_GET['del'];
+    $delUser = $user->deleteUser($delId);
+}
+?>
 <div class="main">
     <h1>Admin Panel - Manage Users</h1>
     <?php
-    if (isset($_GET['dis'])) {
-        $disId = $_GET['dis'];
-        $disUser = $user->disableUser($disId);
+    if (isset($disUser)) {
+        echo $disUser;
+    }
+    if (isset($enaUser)) {
+        echo $enaUser;
+    }
+    if (isset($delUser)) {
+        echo $delUser;
     }
     ?>
     <div class="manageusers">
