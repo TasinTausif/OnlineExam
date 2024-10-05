@@ -1,4 +1,7 @@
 <?php include 'inc/header.php'; ?>
+<?php 
+	Session::checkSession();
+?>
 <div class="main">
 <h1>Welcome to Online Exam - Start Now</h1>
 	<div class="segment" style="margin-right:30px;">

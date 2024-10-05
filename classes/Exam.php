@@ -79,4 +79,34 @@ class Exam
         $maxNum = $row['quesNo'];
         return $maxNum;
     }
+
+    public function getQues()
+    {
+        $query = "SELECT * FROM tbl_ques order by quesNo";
+        $data = $this->db->select($query);
+        $result = $data->fetch_assoc();
+        return $result;
+    }
+
+    public function totalQues()
+    {
+        $query = "SELECT * FROM tbl_ques";
+        $data = $this->db->select($query);
+        return $data->num_rows;
+    }
+
+    public function getQuesByNo($quesNo)
+    {
+        $query = "SELECT * FROM tbl_ques WHERE quesNo = '$quesNo'";
+        $data = $this->db->select($query);
+        $result = $data->fetch_assoc();
+        return $result;
+    }
+
+    public function getAnswer($quesNo)
+    {
+        $query = "SELECT * FROM tbl_ans WHERE quesNo = '$quesNo'";
+        $result = $this->db->select($query);
+        return $result;
+    }
 }

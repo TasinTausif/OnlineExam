@@ -36,7 +36,7 @@ $newQuesNo  = $lastQuesNo + 1;
         <tr>
           <td>Ques No</td>
           <td>:</td>
-          <td><input type="number" name="quesNo" required value="<?php
+          <td><input type="number" name="quesNo" required readonly value="<?php
 if (isset($newQuesNo)) {
   echo $newQuesNo;
 }

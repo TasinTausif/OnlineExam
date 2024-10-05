@@ -5,6 +5,12 @@
   border-bottom: 2px solid #444444;
   height: 100px;
 }
+.success{
+  color:green;
+ }
+.error, .invalid, .disable, .empty{
+  color: red;
+}
 .footeroption{background:#444;color:#fff;text-align:center;padding:20px;}
  .headeroption h2, .footeroption h2{margin:0;font-size:24px}
 .maincontent {
@@ -63,14 +69,14 @@ input[type="submit"] {
   border: 1px solid #d3d3d3;
   border-radius: 4px;
   float: left;
-  min-height: 225px;
+  min-height: 245px;
   padding: 20px;
   width: 357px;
 }
 .segment img {
   height: 200px;
   margin-left: 80px;
-  padding-top: 12px;
+  padding-top: 20px;
 }
 .segment h2 {
   border-bottom: 1px solid #ddd;
@@ -117,4 +123,36 @@ input[type="submit"] {
   font-size: 16px;
   margin-bottom: 10px;
   padding-bottom: 10px;
+}
+
+.starttest{
+  border: 1px solid #f4f4f4;
+  margin: 0 auto;
+  padding: 20px;
+  width: 590px;
+}
+.starttest h2{
+  border-bottom: 1px dashed #ddd;
+  font-size: 20px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.starttest ul{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.starttest ul li{
+  margin-top:5px;
+}
+.starttest a{
+  background: #f4f4f4 none repeat scroll 0 0;
+  border: 1px solid #ddd;
+  color: #3399ff;
+  display: block;
+  margin-top: 10px;
+  padding: 6px 10px;
+  text-align: center;
+  text-decoration: none;
 }

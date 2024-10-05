@@ -17,17 +17,15 @@ class Session{
 	 }
 
 	 public static function checkSession(){
-	 	self::init();
 	 	if (self::get("login") == false) {
 	 		self::destroy();
-	 		header("Location:login.php");
+	 		header("Location:index.php");
 	 	}
 	 }
 
 	 public static function checkLogin(){
-	 	self::init();
 	 	if (self::get("login") == true) {
-	 		header("Location:index.php");
+	 		header("Location:exam.php");
 	 	}
 	 }
 
